@@ -15,8 +15,8 @@
     <!-- /.row -->
 
     <!-- Projects Row -->
-    <div class="row">
-        <div ng-repeat="project in projects" class="col-md-4 portfolio-item">
+    <div class="row" ng-repeat="row in projects">
+        <div ng-repeat="project in row" class="col-md-4 portfolio-item">
             <div class="panel panel-default {{project.done}}">
                 <div class="panel-body">
                     <a href="#/projects/{{project.id}}">

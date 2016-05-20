@@ -9,9 +9,15 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', ['$scope', '$routeParams', 'projects', function($scope, $routeParams, projects) {
+.controller('View2Ctrl', ['$scope', '$routeParams', '$sce', 'projects', function($scope, $routeParams, $sce, projects) {
   var routeId = Number($routeParams.projectId)
   $scope.routeId = routeId;
-  $scope.project = projects.getProjectList()[routeId-1];
+  $scope.page = 0;
+  $scope.row = Math.floor((routeId-1)/3);
+  $scope.project = projects.getProjectList()[$scope.row][((routeId-1)%3)];
+  $scope.trust = $sce.trustAsHtml;
+  $scope.changePage = function(argument){
+    $scope.page = Number(argument);
+  }
   hljs.initHighlightingOnLoad();
 }]);
