@@ -9,6 +9,9 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
-
+.controller('View2Ctrl', ['$scope', '$routeParams', 'projects', function($scope, $routeParams, projects) {
+  var routeId = Number($routeParams.projectId)
+  $scope.routeId = routeId;
+  $scope.project = projects.getProjectList()[routeId-1];
+  hljs.initHighlightingOnLoad();
 }]);

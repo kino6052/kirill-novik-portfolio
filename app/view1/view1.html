@@ -19,11 +19,11 @@
         <div ng-repeat="project in projects" class="col-md-4 portfolio-item">
             <div class="panel panel-default {{project.done}}">
                 <div class="panel-body">
-                    <a href="#">
+                    <a href="#/projects/{{project.id}}">
                         <img class="img-responsive" src="{{project.image}}" style="" alt="">
                     </a>
                     <h3>
-                        <a href="#">{{project.name}}</a>
+                        <a href="#/projects/{{project.id}}">{{project.name}}</a>
                     </h3>
                     <p>{{project.description}}</p>
                     <span ng-repeat="category in project.categories" class="label label-success" style="margin-right: 10px;">{{category}}</span>
