@@ -15,4 +15,5 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', ['projects', '$scope', function(projects, $scope) {
     $scope.projects = projects.getProjectList();
+    $scope.searchCategory = 'all';
 }]);
