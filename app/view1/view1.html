@@ -17,13 +17,18 @@
     <!-- Projects Row -->
     <div class="row">
         <div ng-repeat="project in projects" class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://www.programwitherik.com/content/images/2015/06/Firebase.png" style="" alt="">
-            </a>
-            <h3>
-                <a href="#">{{project.name}}</a>
-            </h3>
-            <p>{{project.description}}</p>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="#">
+                        <img class="img-responsive" src="{{project.image}}" style="" alt="">
+                    </a>
+                    <h3>
+                        <a href="#">{{project.name}}</a>
+                    </h3>
+                    <p>{{project.description}}</p>
+                    <span ng-repeat="category in project.categories" class="label label-success" style="margin-right: 10px;">{{category}}</span>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /.row -->
