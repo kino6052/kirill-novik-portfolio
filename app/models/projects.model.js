@@ -59,7 +59,7 @@ myApp.service('projects', function(){
             name:           'Authentication with Firebase',
             categories:     ['auth', 'jwt', 'node.js'],
             description:    'Powerful Authentication System with Auth0. Based on gulp script by @username',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
+            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/firebase.png',
             done:           false
         },
         {
