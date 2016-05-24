@@ -120,6 +120,14 @@ myApp.service('projects', function(){
                 description:    'Reactive Programming',
                 image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
                 done:           false
+            },
+            {
+                id:             15,
+                name:           'REST with Mongo and Node',
+                categories:     ['rest', 'mongodb', 'node.js'],
+                description:    'Capable RESTful API',
+                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/REST.png',
+                done:           false
             }
         ]
     ];
