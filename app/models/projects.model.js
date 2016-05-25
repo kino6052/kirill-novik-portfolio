@@ -129,6 +129,17 @@ myApp.service('projects', function(){
                 image:          'https://your-project-name-kino6052.c9users.io/app/common/images/REST.png',
                 done:           false
             }
+        ],
+        [
+            {
+                id:             16,
+                name:           'OAuth2 in Node.js',
+                categories:     ['real-time', 'async'],
+                description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
+                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
+                done:           false
+            }
+            
         ]
     ];
     this.getProjectList = function(){
