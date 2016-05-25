@@ -138,8 +138,15 @@ myApp.service('projects', function(){
                 description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
                 image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
                 done:           false
+            },
+            {
+                id:             17,
+                name:           'Master Class in ES2015',
+                categories:     ['es2015', 'javascript'],
+                description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
+                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
+                done:           false
             }
-            
         ]
     ];
     this.getProjectList = function(){
