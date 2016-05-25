@@ -15,10 +15,67 @@ myApp.service('projects', function(){
             description:    'Project on top of a Powerful SSL Module Available in Node.js',
             article:        '<p>Thanks to the open-source nature of Node.js, making https server for applications that do not have large amounts of traffic, and thus are not using proxies, is very managable.</p> <p>Here is the code that creates an https server on top of express. For this project, I generated a public key and a certificate with OpenSSL, but it is certainly not much more difficult to purchase a trusted certificate from the Certificate Provider, however it is going to take more time. The application runs perfectly on the port 443.<p>',
             link:           'https://github.com/kino6052/express-https-server/tree/master/express',
-            code:           [
-                ['www', 'fef6023a8c1153f67da42ea631a22f76', '7-16', 0],
-                ['test', '', '7-16', 1]
-            ],
+            code:           `
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', routes);
+app.use('/users', users);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// error handlers
+
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
+
+
+module.exports = app;`,
             image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
             done:           true
         },

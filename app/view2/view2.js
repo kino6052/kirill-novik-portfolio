@@ -1,16 +1,20 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.view2', ['ngRoute', 'hljs'])
 
-.config(['$routeProvider', function($routeProvider) {
+.config(['$routeProvider', 'hljsServiceProvider', function($routeProvider, hljsServiceProvider) {
+  hljsServiceProvider.setOptions({
+    // replace tab with 4 spaces
+    tabReplace: '    '
+  });
   $routeProvider.when('/view2', {
     templateUrl: 'view2/view2.html',
     controller: 'View2Ctrl'
   });
 }])
 
-.controller('View2Ctrl', ['$scope', '$routeParams', '$sce', 'projects', function($scope, $routeParams, $sce, projects) {
-  var routeId = Number($routeParams.projectId)
+.controller('View2Ctrl', ['$scope', '$routeParams', '$sce', 'projects', '$compile', function($scope, $routeParams, $sce, projects, $compile) {
+  var routeId = Number($routeParams.projectId);
   $scope.routeId = routeId;
   $scope.page = 0;
   $scope.row = Math.floor((routeId-1)/3);
@@ -18,6 +22,6 @@ angular.module('myApp.view2', ['ngRoute'])
   $scope.trust = $sce.trustAsHtml;
   $scope.changePage = function(argument){
     $scope.page = Number(argument);
-  }
-  hljs.initHighlightingOnLoad();
+  };
+  $scope.code = $scope.project.code;
 }]);
