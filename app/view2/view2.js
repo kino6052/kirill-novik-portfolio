@@ -23,5 +23,7 @@ angular.module('myApp.view2', ['ngRoute', 'hljs'])
   $scope.changePage = function(argument){
     $scope.page = Number(argument);
   };
-  $scope.code = $scope.project.code;
+  $scope.currentCodePage = 0;
+  $scope.currentCodePageName = $scope.project.code[$scope.currentCodePage][0]
+  $scope.code = $scope.project.code[$scope.currentCodePage][1];
 }]);
