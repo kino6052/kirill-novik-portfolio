@@ -1,0 +1,70 @@
+<!-- Custom CSS -->
+<link href="./common/css/3-col-portfolio.css" rel="stylesheet">
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><b>#{{searchCategory}}</b></h1>
+        </div>
+    </div>
+    
+    
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <div class="row" ng-repeat="row in projects">
+        <div ng-repeat="project in row" class="col-md-4 portfolio-item">
+            <div class="panel panel-default {{project.done}}">
+                <div class="panel-body">
+                    <a href="#/projects/{{project.id}}">
+                        <img class="img-responsive" src="{{project.image}}" style="" alt="">
+                    </a>
+                    <h3>
+                        <a href="#/projects/{{project.id}}">{{project.name}}</a>
+                    </h3>
+                    <p>{{project.description}}</p>
+                    <span ng-repeat="category in project.categories" class="label label-success" style="margin-right: 10px;">{{category}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Pagination -->
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <ul class="pagination">
+                <li>
+                    <a href="#">&laquo;</a>
+                </li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+</div>
+<!-- /.container -->
+

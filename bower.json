@@ -1,16 +1,28 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
-  "private": true,
+  "name": "kickass-automation-script",
+  "description": "Script for General Bootstrapping of a Web Project",
+  "main": "index.js",
+  "authors": [
+    "Kirill A. Novik"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "gulp",
+    "automation",
+    "web"
+  ],
+  "homepage": "https://github.com/kino6052/kickass-automation-script",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "angular": "~1.4.0",
-    "angular-route": "~1.4.0",
-    "angular-loader": "~1.4.0",
-    "angular-mocks": "~1.4.0",
-    "html5-boilerplate": "~5.2.0",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "moment": "^2.13.0",
+    "babel": "*",
+    "angular": "^1.5.5"
   }
 }
