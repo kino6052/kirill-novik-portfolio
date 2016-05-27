@@ -18,12 +18,12 @@ gulp.task('dist-index', ['clean'], function(){ // move index.html to the 'dist' 
 
 
 gulp.task('dist-assets', ['dist-index'], function () { // Move assets to the 'dist' folder
-  return gulp.src(['./src/**/**/*.js', './src/**/**/*.css', './src/**/**/*.html'].concat(mainBowerFiles()))
+  return gulp.src(['./src/**/**/*.js', './src/**/**/*.css', './src/**/**/*.html', './src/**/**/*.png', './src/**/**/*.jpg'].concat(mainBowerFiles()))
                 .pipe(gulp.dest('./assets'));
 });
 
 gulp.task('dist-assets-2', ['dist-assets'], function () { // Move assets to the 'dist' folder
-  return gulp.src(['./assets/**/**/*.js', './assets/**/**/*.css', './assets/**/**/*.html'].concat(mainBowerFiles()))
+  return gulp.src(['./assets/**/**/*.js', './assets/**/**/*.css', './assets/**/**/*.html', './assets/**/**/*.png', './assets/**/**/*.jpg'].concat(mainBowerFiles()))
                 .pipe(gulp.dest('./dist'));
 });
 
