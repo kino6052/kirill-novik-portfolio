@@ -5,7 +5,7 @@ myApp.service('projects', function(){
             name:           'Overlay Animation',
             categories:     ['css', 'css3'],
             description:    'This Feature Helps Uses CSS3 to Create the Overlay Effect',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/sensei.png',
+            image:          '/app/common/images/sensei.png',
             done:           false
         },
         {
@@ -76,7 +76,7 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;`]],
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
+            image:          '/app/common/images/ssl.png',
             done:           true
         },
         {
@@ -84,7 +84,7 @@ module.exports = app;`]],
             name:           'Classy Gulp',
             categories:     ['gulp'],
             description:    'Powerful gulp script to reduce stress for developrs! Based on gulp script by @username',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/gulp.png',
+            image:          '/app/common/images/gulp.png',
             article:        '<p>Gulp is a powerful automation scripting technolgy for npm projects. I decided to take the minimalist approach, and just use what really matters to kick start my new project for either angular or static html.<p>',
             code:           [
                 ['gulpfile.js',
@@ -147,7 +147,7 @@ gulp.task('default', ['clean', 'dist-index', 'dist-assets', 'concat', 'styles', 
             name:           'Powerful Grunt',
             categories:     ['grunt'],
             description:    'Powerful gulp script to reduce stress for developrs! Based on gulp script by @username',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/grunt.png',
+            image:          '/app/common/images/grunt.png',
             done:           false
         },
         {
@@ -155,7 +155,7 @@ gulp.task('default', ['clean', 'dist-index', 'dist-assets', 'concat', 'styles', 
             name:           'Node.js and JWT',
             categories:     ['auth', 'jwt', 'node.js'],
             description:    'Powerful Authentication System with JWT. Based on gulp script by @username',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/jwt.png',
+            image:          '/app/common/images/jwt.png',
             code:           [
                 ['server.js',
                 `
@@ -336,7 +336,7 @@ app.get('/setup', function(req, res){
             name:           'Authentication with Auth0',
             categories:     ['auth', 'jwt', 'node.js'],
             description:    'Powerful Authentication System with Auth0. Based on gulp script by @username',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/auth0.png',
+            image:          '/app/common/images/auth0.png',
             done:           false
         }],
         [{
@@ -344,7 +344,7 @@ app.get('/setup', function(req, res){
             name:           'Authentication with Firebase',
             categories:     ['auth', 'jwt', 'node.js'],
             description:    'Powerful Authentication System with Auth0. Based on gulp script by @username',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/firebase.png',
+            image:          '/app/common/images/firebase.png',
             done:           false
         },
         {
@@ -352,7 +352,7 @@ app.get('/setup', function(req, res){
             name:           'Angular2 CRUD',
             categories:     ['front-end', 'crud', 'angular'],
             description:    'CRUD made in one of the most powerful front-end frameworks!',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/angular2.png',
+            image:          '/app/common/images/angular2.png',
             done:           false
         },
         {
@@ -360,7 +360,7 @@ app.get('/setup', function(req, res){
             name:           'Meteor CRUD',
             categories:     ['front-end', 'crud', 'angular'],
             description:    'CRUD made in one of the most powerful front-end frameworks!',
-            image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ssl.png',
+            image:          '/app/common/images/ssl.png',
             done:           false
         }],
         [
@@ -369,7 +369,7 @@ app.get('/setup', function(req, res){
                 name:           'React.js Front-end',
                 categories:     ['front-end', 'crud', 'angular'],
                 description:    'Rapid prototyping with React.js',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/react.png',
+                image:          '/app/common/images/react.png',
                 done:           false
             },
             {
@@ -377,7 +377,7 @@ app.get('/setup', function(req, res){
                 name:           'Ionic CRUD App',
                 categories:     ['mobile', 'ionic', 'angular'],
                 description:    'Fast Mobile Apps with Ionic',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/ionic.png',
+                image:          '/app/common/images/ionic.png',
                 done:           false
             },
             {
@@ -385,7 +385,7 @@ app.get('/setup', function(req, res){
                 name:           'Web Workers',
                 categories:     ['front-end', 'crud', 'angular'],
                 description:    'Multithreading with JavaScript',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/webworker.png',
+                image:          '/app/common/images/webworker.png',
                 done:           false
             }
         ],
@@ -395,7 +395,7 @@ app.get('/setup', function(req, res){
                 name:           'Web Sockets',
                 categories:     ['real-time', 'async'],
                 description:    'Real-time Apps with Web Sockets',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/websocket.png',
+                image:          '/app/common/images/websocket.png',
                 done:           false
             },
             {
@@ -403,7 +403,7 @@ app.get('/setup', function(req, res){
                 name:           'Reactive Programming',
                 categories:     ['reactive', 'async'],
                 description:    'Reactive Programming',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/reactive.png',
+                image:          '/app/common/images/reactive.png',
                 done:           false
             },
             {
@@ -411,7 +411,7 @@ app.get('/setup', function(req, res){
                 name:           'REST with Mongo and Node',
                 categories:     ['rest', 'mongodb', 'node.js'],
                 description:    'Capable RESTful API',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/REST.png',
+                image:          '/app/common/images/REST.png',
                 done:           false
             }
         ],
@@ -421,7 +421,7 @@ app.get('/setup', function(req, res){
                 name:           'OAuth2 in Node.js',
                 categories:     ['real-time', 'async'],
                 description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/oauth.png',
+                image:          '/app/common/images/oauth.png',
                 done:           false
             },
             {
@@ -429,7 +429,7 @@ app.get('/setup', function(req, res){
                 name:           'Master Class in ES2015',
                 categories:     ['es2015', 'javascript'],
                 description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
-                image:          'https://your-project-name-kino6052.c9users.io/app/common/images/es2015.png',
+                image:          '/app/common/images/es2015.png',
                 done:           false
             }
         ]

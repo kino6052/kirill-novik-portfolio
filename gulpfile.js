@@ -52,5 +52,19 @@ gulp.task('inject', ['dist-assets-2'], function () {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('about-html', function(){ // move index.html to the 'dist' folder
+  return gulp.src(['./src/about.html'])
+                .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('about-inject', ['about-html'], function () {
+  var target = gulp.src('./dist/about.html');
+  // It's not necessary to read the files (will speed up things), we're only after their paths: 
+  var sources = gulp.src(['./dist/**/**/jquery.js', './dist/**/**/bootstrap.js', './dist/**/bootstrap.min.css'] , {read: false});
+  return target.pipe(inject(sources, {ignorePath: '/dist'}))
+    .pipe(gulp.dest('./dist'));
+});
+
 
 gulp.task('default', ['clean', 'dist-index', 'dist-assets', 'dist-assets-2', 'inject']);
+gulp.task('about', ['about-html', 'about-inject']);
