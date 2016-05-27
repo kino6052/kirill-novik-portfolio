@@ -28,3 +28,21 @@
   content: "";
   padding: 0;
 }
+
+#background {
+  background-image: url('./common/images/background.jpg');
+  color: white;
+}
+
+#footer {
+  color: white;
+  font-weight: bold;
+}
+
+.stroke {
+  text-shadow:
+       -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000!important;
+}

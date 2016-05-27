@@ -385,6 +385,48 @@ app.get('/setup', function(req, res){
                 name:           'Web Workers',
                 categories:     ['front-end', 'crud', 'angular'],
                 description:    'Multithreading with JavaScript',
+                article:        '<p>Web workers allow to speed up resourse-heavy processes on the front, and even back end!</p>',
+                code:           [
+                    [
+                        'index.html',
+                        `
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <button onclick="sayHI()">Say HI</button>
+        <button onclick="unknownCmd()">Send unknown command</button>
+        <button onclick="stop()">Stop worker</button>
+        <output id="result"></output>
+        
+        <script>
+          function sayHI() {
+            worker.postMessage({'cmd': 'start', 'msg': 'Hi'});
+          }
+        
+          function stop() {
+            // worker.terminate() from this script would also stop the worker.
+            worker.postMessage({'cmd': 'stop', 'msg': 'Bye'});
+          }
+        
+          function unknownCmd() {
+            worker.postMessage({'cmd': 'foobard', 'msg': '???'});
+          }
+        
+          var worker = new Worker('web-worker.js');
+        
+          worker.addEventListener('message', function(e) {
+            document.getElementById('result').textContent = e.data;
+          }, false);
+        </script>
+    </body>
+</html>
+
+                        `
+                        ]
+                    ],
                 image:          '/app/common/images/webworker.png',
                 done:           false
             }
@@ -428,6 +470,14 @@ app.get('/setup', function(req, res){
                 id:             17,
                 name:           'Master Class in ES2015',
                 categories:     ['es2015', 'javascript'],
+                description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
+                image:          '/app/common/images/es2015.png',
+                done:           false
+            },
+            {
+                id:             18,
+                name:           'Testing with Karma',
+                categories:     ['unit-test', 'karma'],
                 description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
                 image:          '/app/common/images/es2015.png',
                 done:           false
