@@ -17,7 +17,7 @@ angular.module('myApp.view2', ['ngRoute', 'hljs'])
   var routeId = Number($routeParams.projectId);
   $scope.routeId = routeId;
   $scope.page = 0;
-  $scope.project = projects.getProjectList()[routeId];
+  $scope.project = projects.getProjectList()[routeId-1];
   $scope.trust = $sce.trustAsHtml;
   $scope.changePage = function(argument){
     $scope.page = Number(argument);

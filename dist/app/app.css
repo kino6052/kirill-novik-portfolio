@@ -3,6 +3,23 @@
 body {
   font-family: Roboto!important;
 }
+
+.jumbotron {
+  /*background-image: url('./common/images/jumbotron.jpg');*/
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.jumbotron-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.search {
+  padding-bottom: 30px;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
