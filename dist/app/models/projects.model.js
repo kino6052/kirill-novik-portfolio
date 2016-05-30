@@ -1,11 +1,13 @@
 myApp.service('projects', function(){
     var projectList = [
-        [{
+        {
             id:             1,
             name:           'Overlay Animation',
             categories:     ['css', 'css3'],
             description:    'This Feature Helps Uses CSS3 to Create the Overlay Effect',
             image:          '/app/common/images/sensei.png',
+            article:        'Coming Soon!',
+            code:           [['main.css', 'Coming Soon!']],
             done:           false
         },
         {
@@ -141,8 +143,8 @@ gulp.task('inject', ['uglify'], function () {
 gulp.task('default', ['clean', 'dist-index', 'dist-assets', 'concat', 'styles', 'uglify', 'inject']);`]
             ],
             done:           true
-        }],
-        [{
+        },
+        {
             id:             4,
             name:           'Powerful Grunt',
             categories:     ['grunt'],
@@ -338,20 +340,24 @@ app.get('/setup', function(req, res){
             description:    'Powerful Authentication System with Auth0. Based on gulp script by @username',
             image:          '/app/common/images/auth0.png',
             done:           false
-        }],
-        [{
+        },
+        {
             id:             7,
             name:           'Authentication with Firebase',
             categories:     ['auth', 'jwt', 'node.js'],
             description:    'Powerful Authentication System with Auth0. Based on gulp script by @username',
+            article:        'Coming Soon!',
+            code:           [['main', 'Coming Soon!']],
             image:          '/app/common/images/firebase.png',
-            done:           false
+            done:           true
         },
         {
             id:             8,
             name:           'Angular2 CRUD',
             categories:     ['front-end', 'crud', 'angular'],
             description:    'CRUD made in one of the most powerful front-end frameworks!',
+            article:        'Coming Soon!',
+            code:           [['main', 'Coming Soon!']],
             image:          '/app/common/images/angular2.png',
             done:           false
         },
@@ -360,15 +366,18 @@ app.get('/setup', function(req, res){
             name:           'Meteor CRUD',
             categories:     ['front-end', 'crud', 'angular'],
             description:    'CRUD made in one of the most powerful front-end frameworks!',
+            article:        'Coming Soon!',
+            code:           [['main', 'Coming Soon!']],
             image:          '/app/common/images/ssl.png',
             done:           false
-        }],
-        [
+        },
             {
                 id:             10,
                 name:           'React.js Front-end',
                 categories:     ['front-end', 'crud', 'angular'],
                 description:    'Rapid prototyping with React.js',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/react.png',
                 done:           false
             },
@@ -377,6 +386,8 @@ app.get('/setup', function(req, res){
                 name:           'Ionic CRUD App',
                 categories:     ['mobile', 'ionic', 'angular'],
                 description:    'Fast Mobile Apps with Ionic',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/ionic.png',
                 done:           false
             },
@@ -428,15 +439,15 @@ app.get('/setup', function(req, res){
                         ]
                     ],
                 image:          '/app/common/images/webworker.png',
-                done:           false
-            }
-        ],
-        [
+                done:           true
+            },
             {
                 id:             13,
                 name:           'Web Sockets',
                 categories:     ['real-time', 'async'],
                 description:    'Real-time Apps with Web Sockets',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/websocket.png',
                 done:           false
             },
@@ -445,6 +456,8 @@ app.get('/setup', function(req, res){
                 name:           'Reactive Programming',
                 categories:     ['reactive', 'async'],
                 description:    'Reactive Programming',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/reactive.png',
                 done:           false
             },
@@ -453,16 +466,18 @@ app.get('/setup', function(req, res){
                 name:           'REST with Mongo and Node',
                 categories:     ['rest', 'mongodb', 'node.js'],
                 description:    'Capable RESTful API',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/REST.png',
-                done:           false
-            }
-        ],
-        [
+                done:           true
+            },
             {
                 id:             16,
                 name:           'OAuth2 in Node.js',
                 categories:     ['real-time', 'async'],
                 description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/oauth.png',
                 done:           false
             },
@@ -471,6 +486,8 @@ app.get('/setup', function(req, res){
                 name:           'Master Class in ES2015',
                 categories:     ['es2015', 'javascript'],
                 description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/es2015.png',
                 done:           false
             },
@@ -479,10 +496,11 @@ app.get('/setup', function(req, res){
                 name:           'Testing with Karma',
                 categories:     ['unit-test', 'karma'],
                 description:    'http://resources.infosecinstitute.com/securing-web-apis-part-ii-creating-an-api-authenticated-with-oauth-2-in-node-js/',
+                article:        'Coming Soon!',
+                code:           [['main', 'Coming Soon!']],
                 image:          '/app/common/images/es2015.png',
                 done:           false
             }
-        ]
     ];
     this.getProjectList = function(){
         return projectList;

@@ -1,5 +1,8 @@
 /* app css stylesheet */
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body {
+  font-family: Roboto!important;
+}
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -33,6 +36,42 @@
   background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 5px;
+}
+
+/*
+  We're using CSS transitions for when
+  the enter and move events are triggered
+  for the element that has the .repeated-item
+  class
+*/
+.portfolio-item.ng-enter, .portfolio-item.ng-move {
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+/*
+ The ng-enter-active and ng-move-active
+ are where the transition destination properties
+ are set so that the animation knows what to
+ animate.
+*/
+.portfolio-item.ng-enter.ng-enter-active,
+.portfolio-item.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+/*
+  We're using CSS keyframe animations for when
+  the leave event is triggered for the element
+  that has the .repeated-item class
+*/
+.portfolio-item.ng-leave {
+  animation: 0.5s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
 }
 
 #background {
