@@ -1,37 +1,33 @@
 <!-- Custom CSS -->
 <link href="./common/css/3-col-portfolio.css" rel="stylesheet">
 
-<!-- Page Content -->
-<div class="container">
 
-    <!-- Page Header -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header"><b class="stroke">#{{searchCategory}}</b></h1>
-        </div>
+<!-- Page Header -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header"><b class="stroke">#{{searchCategory}}</b></h1>
     </div>
-    
-    
-    <!-- /.row -->
+</div>
 
-    <!-- Projects Row -->
-    <div class="row" ng-repeat="row in projects">
-        <div ng-repeat="project in row" class="col-md-4 portfolio-item">
-            <div class="panel panel-default {{project.done}}">
-                <div class="panel-body">
-                    <a href="#/projects/{{project.id}}">
-                        <img class="img-responsive" src="{{project.image}}" style="" alt="">
-                    </a>
-                    <h3>
-                        <a href="#/projects/{{project.id}}">{{project.name}}</a>
-                    </h3>
-                    <p>{{project.description}}</p>
-                    <span ng-repeat="category in project.categories" class="label label-success" style="margin-right: 10px;">{{category}}</span>
-                </div>
+
+<!-- /.row -->
+
+<!-- Projects Row -->
+<div class="row" ng-repeat="row in projects">
+    <div ng-repeat="project in row" class="col-md-4 portfolio-item">
+        <div class="panel panel-default {{project.done}}">
+            <div class="panel-body">
+                <a href="#/projects/{{project.id}}">
+                    <img class="img-responsive" src="{{project.image}}" style="" alt="">
+                </a>
+                <h3>
+                    <a href="#/projects/{{project.id}}">{{project.name}}</a>
+                </h3>
+                <p>{{project.description}}</p>
+                <span ng-repeat="category in project.categories" class="label label-success" style="margin-right: 10px;">{{category}}</span>
             </div>
         </div>
     </div>
-    <!-- /.row -->
 </div>
-<!-- /.container -->
+<!-- /.row -->
 

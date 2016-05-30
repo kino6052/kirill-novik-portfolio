@@ -1,37 +1,41 @@
 <!-- Custom CSS -->
 <link href="./common/css/3-col-portfolio.css" rel="stylesheet">
 
-<!-- Page Content -->
-<div class="container">
-
-    <!-- Page Header -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header"><b class="stroke">#{{searchCategory}}</b></h1>
-        </div>
+<div class="jumbotron">
+  <h1 class="display-3">Welcome to My Portfolio!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="m-y-2">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+<!-- Page Header -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header"><b class="stroke">#{{searchCategory}}</b></h1>
     </div>
-    
-    
-    <!-- /.row -->
+</div>
 
-    <!-- Projects Row -->
-    <div class="row" ng-repeat="row in projects">
-        <div ng-repeat="project in row" class="col-md-4 portfolio-item">
-            <div class="panel panel-default {{project.done}}">
-                <div class="panel-body">
-                    <a href="#/projects/{{project.id}}">
-                        <img class="img-responsive" src="{{project.image}}" style="" alt="">
-                    </a>
-                    <h3>
-                        <a href="#/projects/{{project.id}}">{{project.name}}</a>
-                    </h3>
-                    <p>{{project.description}}</p>
-                    <span ng-repeat="category in project.categories" class="label label-success" style="margin-right: 10px;">{{category}}</span>
-                </div>
+
+<!-- /.row -->
+
+<!-- Projects Row -->
+<div class="row" ng-repeat="row in projects">
+    <div ng-repeat="project in row" class="col-md-4 portfolio-item">
+        <div class="panel panel-default {{project.done}}">
+            <div class="panel-body">
+                <a href="#/projects/{{project.id}}">
+                    <img class="img-responsive" src="{{project.image}}" style="" alt="">
+                </a>
+                <h3>
+                    <a href="#/projects/{{project.id}}">{{project.name}}</a>
+                </h3>
+                <p>{{project.description}}</p>
+                <span ng-repeat="category in project.categories" class="label label-success" style="margin-right: 10px;">{{category}}</span>
             </div>
         </div>
     </div>
-    <!-- /.row -->
 </div>
-<!-- /.container -->
+<!-- /.row -->
 
